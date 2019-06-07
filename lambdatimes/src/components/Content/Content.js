@@ -44,7 +44,35 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-		return this.state.cards;
+		// this.state.selected === "all"
+		// 	? this.state.cards
+		// 	: this.state.cards.filter(el => el.tab === this.state.selected);
+		// why doesn't above ternary work?
+
+		if (this.state.selected === "all") {
+			return this.state.cards;
+		} else {
+			return this.state.cards.filter(el => el.tab === this.state.selected);
+		}
+
+		// if (this.state.selected === "all") {
+		// 	return cardData;
+		// } else {
+		// 	return cardData.filter(el => el.tab === this.state.selected);
+		// }
+		// above does not fully utilize react
+
+		// if (this.state.selected === "all") {
+		// 	this.setState({
+		// 		cards: cardData
+		// 	});
+		// } else {
+		// 	this.setState({
+		// 		cards: cardData.filter(el => el.tab === this.state.selected)
+		// 	});
+		// }
+		// return this.state.cards;
+		// above results in infinite loop
 	};
 
 	render() {
