@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Carousel from "../Carousel/Carousel";
 import Tabs from "./Tabs";
 import Cards from "./Cards";
 
@@ -44,16 +44,15 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-		// this.state.selected === "all"
-		// 	? this.state.cards
-		// 	: this.state.cards.filter(el => el.tab === this.state.selected);
-		// why doesn't above ternary work?
+		return this.state.selected === "all"
+			? this.state.cards
+			: this.state.cards.filter(card => card.tab === this.state.selected);
 
-		if (this.state.selected === "all") {
-			return this.state.cards;
-		} else {
-			return this.state.cards.filter(el => el.tab === this.state.selected);
-		}
+		// if (this.state.selected === "all") {
+		// 	return this.state.cards;
+		// } else {
+		// 	return this.state.cards.filter(el => el.tab === this.state.selected);
+		// }
 
 		// if (this.state.selected === "all") {
 		// 	return cardData;
@@ -88,6 +87,7 @@ export default class Content extends Component {
 					selectTabHandler={this.changeSelected}
 					tabs={this.state.tabs}
 				/>
+				<Carousel />
 				<Cards cards={this.filterCards()} />
 			</div>
 		);
