@@ -18,17 +18,25 @@ export default class Carousel extends Component {
 
 	leftClick = () => {
 		if (this.state.counter > 0) {
-			this.state.counter -= 1;
+			this.setState(prevState => ({
+				counter: prevState.counter - 1
+			}));
 		} else {
-			this.state.counter = 4;
+			this.setState({
+				counter: 3
+			});
 		}
 	};
 
 	rightClick = () => {
-		if (this.state.counter > 0) {
-			this.state.counter += 1;
+		if (this.state.counter < 3) {
+			this.setState(prevState => ({
+				counter: prevState.counter + 1
+			}));
 		} else {
-			this.state.counter = -1;
+			this.setState({
+				counter: 0
+			});
 		}
 	};
 
@@ -47,6 +55,7 @@ export default class Carousel extends Component {
 				<div className="left-button" onClick={this.leftClick}>
 					{"<"}
 				</div>
+				<div>{this.selectedImage()}</div>
 				<div className="right-button" onClick={this.rightClick}>
 					{">"}
 				</div>
