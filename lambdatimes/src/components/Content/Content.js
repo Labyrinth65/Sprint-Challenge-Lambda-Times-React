@@ -52,7 +52,11 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-				<Tabs tabs={this.state.tabs} />
+				<Tabs
+					selectedTab={this.state.selectedTab}
+					selectTabHandler={this.state.selectTabHandler}
+					tabs={this.state.tabs}
+				/>
 				<Cards cards={this.filterCards()} />
 			</div>
 		);
