@@ -28,37 +28,51 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+- [x] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+Used to doublecheck that the data being passed around is the same type of data that the developers intended to be passed around
+
+- [x] Describe a life-cycle event in React?
+
+A method called during life cycle (mount update unmount) that allow developers to update the user interface and state
+
+- [x] Explain the details of a Higher Order Component?
+
+An HOC allows us to reuse component logic - it's a function that receives a component as an argument and returns a new component (often with additional functionality). This allows us to share functionality while keep code DRY. Login with user/password is a good example
+
+- [x] What are three different ways to style components in React? Explain some of the benefits of each.
+
+CSS, use a library, or styled components.
+CSS: familiarity, lots of shared knowledge in the human hive mind because of longer use
+Library: prebuilt components that are already styled
+Styled Components: able to write CSS in JSX, allows for props to be passed into CSS
 
 ## Project Setup
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
-- [ ] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
-- [ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+- [x] Create a forked copy of this project.
+- [x] Add your project manager as collaborator on Github.
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
+- [x] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
+- [x] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
-- [ ] Add your project manager as a reviewer on the pull-request
-- [ ] Your project manager will count the project as complete by merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [x] Add your project manager as a reviewer on the pull-request
+- [x] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Minimum Viable Product
 
-- [ ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
-- [ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- [ ] You should now be able to filter cards using your tabs!
-- [ ] Make sure all of your props being passed are validated using PropTypes.
-- [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
+- [x] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
+- [x] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
+- [x] You should now be able to filter cards using your tabs!
+- [x] Make sure all of your props being passed are validated using PropTypes.
+- [x] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 
 ## Stretch Challenge
 
